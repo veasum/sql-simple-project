@@ -50,6 +50,15 @@ JOIN transactions t
     ON a.id = t.account_id
 GROUP BY c.full_name;
 
+SELECT
+    account_id,
+    amount,
+    created_at,
+    LAG(amount) OVER (
+        PARTITION BY account_id
+        ORDER BY created_at
+    ) as previous_transaction
+FROM transactions;
 
 CREATE INDEX idx_transactions_account_created
 ON transactions(account_id, created_at);
