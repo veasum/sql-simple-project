@@ -1,4 +1,4 @@
-SQL Banking Project
+SQL Simple Project
 ====================================
 
 ## Project Description
@@ -73,7 +73,7 @@ Database: bank
 
 ## Project Structure
 ```
-sql-bank-project/
+sql-simple-project/
 ├── docker-compose.yml
 ├── README.md
 └── sql/
